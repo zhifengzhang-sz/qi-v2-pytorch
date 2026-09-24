@@ -1,4 +1,4 @@
-# pytorch
+# qi-v2-pytorch
 
 A single reproducible GPU dev environment for all my PyTorch projects.
 
@@ -9,7 +9,7 @@ where they share the container, the Python venv, and the tooling. Nothing
 under `projects/` is committed here.
 
 ```
-pytorch/                 this repo  (github.com/zhifengzhang-sz/pytorch)
+qi-v2-pytorch/           this repo  (github.com/zhifengzhang-sz/qi-v2-pytorch)
 └── projects/
     ├── project1/        its own repo, cloned here
     └── project2/        its own repo, cloned here
@@ -30,7 +30,7 @@ flowchart TB
     subgraph wsl["WSL2 · Ubuntu"]
         stubs["/usr/lib/wsl/lib<br/>libcuda.so stubs"]
         docker["Docker Engine +<br/>NVIDIA Container Toolkit"]
-        subgraph repo["~/dev/pytorch  (this repo, github.com/zhifengzhang-sz/pytorch)"]
+        subgraph repo["~/dev/ts/qi-v2/projects/qi-v2-pytorch  (this repo, github.com/zhifengzhang-sz/qi-v2-pytorch)"]
             envfiles["Dockerfile · docker-compose.yml<br/>requirements.txt · pyproject.toml · Makefile"]
             subgraph projects["projects/  (gitignored)"]
                 p1["project1/<br/>own GitHub repo"]
@@ -70,7 +70,7 @@ flowchart TB
 
 ```bash
 git clone git@github.com:zhifengzhang-sz/pytorch.git
-cd pytorch
+cd qi-v2-pytorch
 cp .env.example .env   # set UID/GID to `id -u` / `id -g` if not 1000
 make build             # one-time, downloads several GB
 make gpu               # prints torch version and GPU name
