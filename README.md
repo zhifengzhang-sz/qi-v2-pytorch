@@ -69,7 +69,7 @@ flowchart TB
 ## Quick start
 
 ```bash
-git clone git@github.com:zhifengzhang-sz/pytorch.git
+git clone git@github.com:zhifengzhang-sz/qi-v2-pytorch.git
 cd qi-v2-pytorch
 cp .env.example .env   # set UID/GID to `id -u` / `id -g` if not 1000
 make build             # one-time, downloads several GB
