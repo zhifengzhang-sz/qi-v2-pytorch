@@ -33,3 +33,6 @@ wandb/
 !.vscode/extensions.json
 .idea/
 .DS_Store
+
+# Local compose override (mounts sibling projects); see README "Working on a project"
+docker-compose.override.yml

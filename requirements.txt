@@ -1,6 +1,7 @@
 # Core scientific stack
 numpy
 pandas
+pyarrow
 scipy
 scikit-learn
 matplotlib
